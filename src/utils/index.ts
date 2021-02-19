@@ -28,7 +28,7 @@ export const useMount = (callBack:()=>void) => {
 }
 //后面要用泛型来定义
 
-export const useDebounce = (value:unknown, delay?:number):any => {
+export const useDebounce = <V>(value:V, delay?:number):any => {
    const [debouncedValue, setDebouncedValue] = useState(value)
    useEffect(() => {
       const timeOut = setTimeout(() => {
